@@ -1,25 +1,33 @@
 plugins {
-    id("com.android.application")
-    id("org.jetbrains.kotlin.android")
+    id(Plugins.Build.ANDROID_APPLICATION)
+    id(Plugins.Build.KOTLIN_ANDROID)
+    id(Plugins.Build.KOTLIN_KAPT)
 }
 
 android {
-    namespace = "app.junsu.cleanarchitecturetemplate"
-    compileSdk = 33
+
+    namespace = AppConfigs.NameSpaces.APP
+
+    compileSdk = AppConfigs.DefaultConfigs.COMPILE_SDK_VERSION
 
     defaultConfig {
-        applicationId = "app.junsu.cleanarchitecturetemplate"
-        minSdk = 26
-        targetSdk = 33
-        versionCode = 1
-        versionName = "1.0"
+        applicationId = AppConfigs.DefaultConfigs.APPLICATION_ID
+        minSdk = AppConfigs.DefaultConfigs.MINIMUM_SDK_VERSION
+        targetSdk = AppConfigs.DefaultConfigs.TARGET_SDK_VERSION
+        versionCode = AppConfigs.DefaultConfigs.VERSION_CODE
+        versionName = AppConfigs.DefaultConfigs.VERSION_NAME
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    buildFeatures {
+        compose = AppConfigs.BuildFeatures.IS_COMPOSE_ENABLED
+        dataBinding = AppConfigs.BuildFeatures.IS_DATA_BINDING_ENABLED
+    }
+
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = AppConfigs.BuildTypes.IS_MINIFY_ENABLED
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro",
@@ -27,11 +35,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = AppConfigs.CompileOptions.SOURCE_COMPATIBILITY
+        targetCompatibility = AppConfigs.CompileOptions.TARGET_COMPATIBILITY
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = AppConfigs.KotlinOptions.JVM_TARGET
     }
 }
 
