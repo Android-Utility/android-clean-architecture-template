@@ -19,3 +19,4 @@ dependencyResolutionManagement {
 rootProject.name = "Clean Architecture Template"
 
 include(":app")
+include(":data")
