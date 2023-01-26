@@ -1,7 +1,8 @@
 object AppConfigs {
     object NameSpaces {
-        const val APP = "app.junsu.app"
+        const val DOMAIN = "app.junsu.domain"
         const val DATA = "app.junsu.data"
+        const val APP = "app.junsu.app"
     }
 
     object DefaultConfigs {
