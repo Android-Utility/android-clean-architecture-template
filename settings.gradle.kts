@@ -1,5 +1,7 @@
 @file:Suppress("UnstableApiUsage")
 
+
+
 pluginManagement {
     repositories {
         gradlePluginPortal()
@@ -21,3 +23,4 @@ rootProject.name = "Clean Architecture Template"
 include(":domain")
 include(":data")
 include(":app")
+include(":feature:feature-main")
