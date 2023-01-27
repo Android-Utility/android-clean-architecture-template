@@ -6,6 +6,10 @@ object Dependencies {
             "com.google.android.material:material:${Versions.Android.MATERIAL_VERSION}"
     }
 
+    object Java {
+        const val INJECT = "javax.inject:javax.inject:${Versions.Java.JAVA_INJECT_VERSION}"
+    }
+
     object Test {
         const val JUNIT = "junit:junit:${Versions.Test.JUNIT_VERSION}"
     }

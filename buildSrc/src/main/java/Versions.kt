@@ -13,6 +13,7 @@ object Versions {
 
     object Java {
         val JAVA_VERSION = JavaVersion.VERSION_1_8
+        const val JAVA_INJECT_VERSION = "1"
     }
 
     object Gradle {
