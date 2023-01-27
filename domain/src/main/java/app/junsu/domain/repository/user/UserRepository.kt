@@ -1,6 +1,6 @@
-package app.junsu.domain.repository.auth
+package app.junsu.domain.repository.user
 
-interface AuthRepository {
+interface UserRepository {
 
     suspend fun login(
         email: String,
